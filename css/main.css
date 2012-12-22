@@ -1,0 +1,65 @@
+body {
+    padding: 30px 0px;
+}
+
+.drum-pads .drum-pad-labels {
+    height: 20px;
+}
+
+.drum-pads .drum-pad-labels span,
+.drum-controls-label span {
+    margin-left: 10px;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #aeaeae;
+}
+
+.drum-pads .drum-pad-labels a {
+    margin-right: 5px;
+}
+
+.drum-pads .drum-pad {
+    height: 140px;
+    border: 2px solid #cacaca;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: #efefef;
+    box-shadow: 1px 0px 4px 1px rgba(150, 150, 150, 0.4);
+}
+
+.drum-pads .drum-pad:hover {
+    border-color: #b9b9b9;
+    -webkit-transition: border-color 0.1s ease-in .1s;
+}
+
+.drum-pads .drum-pad.drum-pad-active {
+    -webkit-animation: active-pad 1s;
+}
+
+@-webkit-keyframes active-pad
+{
+    0%   {border-color: #b90200; background: #d29296;}
+    100% {border-color: #cacaca; background: #efefef;}
+}
+
+.drum-controls {
+    height: 464px;
+    background-color: #efefef;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
