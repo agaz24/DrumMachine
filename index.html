@@ -16,93 +16,93 @@
                     <div class="drum-pad-labels row">
                         <div class="span2">
                             <span>PAD Q</span>
-                            <a class="pull-right" href="#" title="Edit">
+                            <a class="pull-right" id="pad-1-edit" rel="1" href="#" title="Edit">
                                 <i class="icon-pencil"></i>
                             </a>
                         </div>
                         <div class="span2">
                             <span>PAD W</span>
-                            <a class="pull-right" href="#" title="Edit">
+                            <a class="pull-right" id="pad-2-edit" rel="2" href="#" title="Edit">
                                 <i class="icon-pencil"></i>
                             </a>
                         </div>
                         <div class="span2">
                             <span>PAD E</span>
-                            <a class="pull-right" href="#" title="Edit">
+                            <a class="pull-right" id="pad-3-edit" rel="3" href="#" title="Edit">
                                 <i class="icon-pencil"></i>
                             </a>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="drum-pad drum-pad-active span2" id="pad-1">
+                        <div class="drum-pad drum-pad-active span2" id="pad-1" rel="0">
 
                         </div>
-                        <div class="drum-pad drum-pad-active span2" id="pad-2">
+                        <div class="drum-pad drum-pad-active span2" id="pad-2" rel="1">
 
                         </div>
-                        <div class="drum-pad drum-pad-active span2" id="pad-3">
+                        <div class="drum-pad drum-pad-active span2" id="pad-3" rel="2">
 
                         </div>
                     </div>
                     <div class="drum-pad-labels row">
                         <div class="span2">
                             <span>PAD A</span>
-                            <a class="pull-right" href="#" title="Edit">
+                            <a class="pull-right" id="pad-4-edit" rel="4" href="#" title="Edit">
                                 <i class="icon-pencil"></i>
                             </a>
                         </div>
                         <div class="span2">
                             <span>PAD S</span>
-                            <a class="pull-right" href="#" title="Edit">
+                            <a class="pull-right" id="pad-5-edit" rel="5" href="#" title="Edit">
                                 <i class="icon-pencil"></i>
                             </a>
                         </div>
                         <div class="span2">
                             <span>PAD D</span>
-                            <a class="pull-right" href="#" title="Edit">
+                            <a class="pull-right" id="pad-6-edit" rel="6" href="#" title="Edit">
                                 <i class="icon-pencil"></i>
                             </a>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="drum-pad drum-pad-active span2" id="pad-4">
+                        <div class="drum-pad drum-pad-active span2" id="pad-4" rel="3">
 
                         </div>
-                        <div class="drum-pad drum-pad-active span2" id="pad-5">
+                        <div class="drum-pad drum-pad-active span2" id="pad-5" rel="4">
 
                         </div>
-                        <div class="drum-pad drum-pad-active span2" id="pad-6">
+                        <div class="drum-pad drum-pad-active span2" id="pad-6" rel="5">
 
                         </div>
                     </div>
                     <div class="drum-pad-labels row">
                         <div class="span2">
                             <span>PAD Z</span>
-                            <a class="pull-right" href="#" title="Edit">
+                            <a class="pull-right" id="pad-7-edit" rel="7" href="#" title="Edit">
                                 <i class="icon-pencil"></i>
                             </a>
                         </div>
                         <div class="span2">
                             <span>PAD X</span>
-                            <a class="pull-right" href="#" title="Edit">
+                            <a class="pull-right" id="pad-8-edit" rel="8" href="#" title="Edit">
                                 <i class="icon-pencil"></i>
                             </a>
                         </div>
                         <div class="span2">
                             <span>PAD C</span>
-                            <a class="pull-right" href="#" title="Edit">
+                            <a class="pull-right" id="pad-9-edit" rel="9" href="#" title="Edit">
                                 <i class="icon-pencil"></i>
                             </a>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="drum-pad drum-pad-active span2" id="pad-7">
+                        <div class="drum-pad drum-pad-active span2" id="pad-7" rel="6">
 
                         </div>
-                        <div class="drum-pad drum-pad-active span2" id="pad-8">
+                        <div class="drum-pad drum-pad-active span2" id="pad-8" rel="7">
 
                         </div>
-                        <div class="drum-pad drum-pad-active span2" id="pad-9">
+                        <div class="drum-pad drum-pad-active span2" id="pad-9" rel="8">
 
                         </div>
                     </div>
@@ -111,14 +111,39 @@
                     <span>CONTROLS</span>
                 </div>
                 <div class="drum-controls row span6">
-
+                    <form id="sound-form">
+                        <fieldset>
+                            <legend>Edit sound</legend>
+                            <canvas id="waveform" width="420" height="100"></canvas>
+                        </fieldset>
+                    </form>
+                    <form id="empty-sound-form">
+                        <fieldset>
+                            <legend>Load sound</legend>
+                            <label>Only WAV files</label>
+                            <input type="file" id="load-sound-input" />
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </div>
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/audiolet/audiofile/audiofile.js"></script>
         <script src="js/vendor/audiolet/audiolet/Audiolet.js"></script>
+
+        <script src="js/dm/Utils.js"></script>
+
+        <script src="js/dm/Sound.js"></script>
+        <script src="js/dm/Waveform.js"></script>
+        <script src="js/dm/Pad.js"></script>
+
+        <script src="js/dm/Collection.js"></script>
+
+        <script src="js/dm/AppContext.js"></script>
+        <script src="js/dm/AppController.js"></script>
+
         <script src="js/main.js"></script>
     </body>
 </html>

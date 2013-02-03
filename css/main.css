@@ -35,19 +35,35 @@ body {
 }
 
 .drum-pads .drum-pad.drum-pad-active {
-    -webkit-animation: active-pad 1s;
+    -webkit-animation-name: active-pad;
+    -webkit-animation-duration: 1s;
 }
 
 @-webkit-keyframes active-pad
 {
     0%   {border-color: #b90200; background: #d29296;}
+    60%   {border-color: #b90200; background: #d29296;}
     100% {border-color: #cacaca; background: #efefef;}
 }
 
 .drum-controls {
     height: 464px;
+    padding: 20px;
     background-color: #efefef;
     border-radius: 8px;
+    -webkit-box-sizing:border-box;
+       -moz-box-sizing:border-box;
+            box-sizing:border-box;
+}
+
+.drum-controls > form {
+    display: none;
+}
+
+.drum-controls > form #load-sound-input {
+    height: 22px;
+    margin: 20px 0px 0px 0px;
+    line-height: normal;
 }
 
 
